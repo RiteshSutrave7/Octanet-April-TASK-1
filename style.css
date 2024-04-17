@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Bubblegum+Sans&family=Dhurjati&family=Kaushan+Script&family=Lato&family=Lilita+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Dhurjati';
+    transition: .6s;
+}
+:root{
+    --color1: #172228;
+    --color2: #ea0046;
+}
+
+.header{
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color1);
+    z-index: 99;
+}
+.logo a{
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 80px;
+    letter-spacing: 1px;
+}
+
+ul li{
+    display: inline-block;
+}
+ul li a {
+    margin: 0 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+ul li:hover a{
+    color: var(--color2);
+}
+i{
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+i:hover{
+    color: #ea0046;
+}
+.header .fa-user{
+    display: none;
+}
+
+button{
+    padding: 4px 20px;
+    color: #fff;
+    background-color: var(--color2);
+    outline: none;
+    border: 1px solid var(--color2);
+    font-size: 1.2rem;
+}
+button:hover{
+    background-color: #172228;
+    color: #ea0046;
+}
+
+.login-section #top-btn{
+    margin-right: 20px;
+}
+.header .fa-bars{
+    font-size: 1.3rem;
+    padding: 8px;
+    border: 2px solid var(--color2);
+    display: none;
+
+}
+.header .fa-bars:hover{
+    color: #ea0046;
+}
+ /* Hero Section */
+
+ .hero-section{
+    height: 100vh;
+    width: 100%;
+    padding: 0 100px;
+    background: url("images/home-v1-hero.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.hero-section h2{
+    font-size: 2.8rem;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: -75px;
+    text-transform: uppercase;
+}
+.hero-section h1{
+    margin-bottom: 5px;
+    font-size: 7rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.hero-section h1 span{
+    color: #ea0046;
+}
+.hero-section p{
+    margin-top: -75px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+.hero-section #Tournament{
+    margin-right: 20px;
+}
+
+
+
+
+@media (max-Width:1100px){
+    .header .fa-bars{
+        display: block;
+    }
+    .logo a{
+        margin-left: 0px;
+    }
+    .header{
+        position: relative;
+        justify-content: space-around;
+    }
+    ul{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        height: 450px;
+        width: 100%;
+        background-color: #172228;
+    }
+    ul li{
+        display: block;
+        border-bottom: 1px solid #999;
+        width: 99%;
+        margin: 5px 0;
+        padding: 8px 0;
+        border-radius: 10px;
+    }
+    ul li:hover{
+        border-color: #ea0046;
+    }
+    ul li:last-child{
+        border: 0;
+    }
+    .header .fa-user{
+        position: absolute;
+        display: block;
+        right: 30%;
+    }
+    .login-section{
+        position: absolute;
+        top: 99%;
+        right: 15%;
+        background-color: #172228;
+        height: 85px;
+        padding: 20px;
+        border-radius: 3px;
+        opacity: 0;
+    }
+    .open{
+        left: 0;
+    }
+    .show{
+        opacity: 1;
+    }
+}
+
+@media (max-Width:900px){
+    .hero-section h2{
+        font-size: 2.5rem;
+    }
+    .hero-section h1{
+        font-size: 6rem;
+    }
+}
+@media (max-Width:768px){
+    .hero-section{
+        padding: 0 25px;
+    }
+}
+@media (max-width:555px){
+    .hero-section h2{
+        font-size: 2rem;
+        margin-bottom:-50px;
+    }
+    .hero-section h1{
+        font-size: 4rem;
+    }
+    .hero-section p{
+        margin-top: -40px;
+        margin-bottom: 20px;
+    }
+}
